@@ -1,0 +1,196 @@
+
+header{
+    background-color: #999999;
+}
+
+hgroup{
+    color: red;
+}
+
+header div{
+    display: flex;
+    margin-left: 10%;
+    align-items: center;
+}
+
+.contacts{/*moving  red and black boxes to the top*/
+    position:absolute;
+    width: 50%;
+    line-height: 25px;
+    top: 10px;
+    right: 0;
+    /* color: hotpink; */
+}
+
+dl{/*red and black box*/
+    display: flex;
+    margin: 0;
+}
+
+dt {/*red box email skype......*/
+    color: white;
+    background: red;
+    width: 22%;
+    padding-left: 5px;
+    /* margin: 0 */
+}
+ 
+dd {/*black box [ width=100 - dt_Width ]*/
+    color: red;
+    background: black;
+    width: 78%;
+    margin: 0;    
+    padding-left: 5px;
+}
+
+dd a{/*black box :remove line under links */
+    color: red;
+    text-decoration: none;
+}
+.content{/*div main*/
+    display:grid;
+    grid-template-columns:50% 50%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+p{/*make space between R_L_grid*/
+    width: 95%;
+}
+
+h3{/*titles*/
+    padding-bottom: 0px;/*space under titel*/
+     border-bottom: 1px solid #999999;/*line under title*/
+     display: list-item; 
+    list-style-type:none;       
+}
+h3::before{/*red big bullet */
+    content: "\2022";
+    color: red;
+    font-size: 50px;/*bullet size*/
+    display:inline-block;/*bullet position*/
+    vertical-align: middle;/*bullet position*/
+    height:5px;
+    width: 5px;
+    margin-right: 30px;/*add a cpace after bullet*/
+    margin-bottom: 55px;
+}
+#contact h3{/*hide the contect title*/
+    display: none;
+}
+.experience-type::after{/*add @ bettwen exp_type and exp_instit*/
+    content: " @";
+    color: red;
+}
+h4{
+    color: red;
+    margin-bottom: 0;
+}
+.experience-details{
+    color: #b6aeae;
+}
+.experience-location::before{
+    content: "In";
+    color: #b6aeae;;
+}
+.experience-location::after{
+    content: "on";
+    color: #b6aeae;;
+}
+.experience-date-separator{
+    color: red;
+}
+.skills-primary::before{
+    content: "Main";
+}
+
+.skills-secondary::before{
+    content: "Other";
+}
+
+
+.skills-primary div {/*set the first gray box*/
+    width: 100%;
+    color: white;
+    background-color:gray;
+    margin-bottom: 1%;
+    padding: 5px 0 5px 5px;
+    
+}
+
+.skills-secondary div{/*set the second gray box*/
+    width: 100%;
+    color: white;
+    background-color: gray;
+    margin-bottom: 1%;
+    padding: 5px 0 5px 5px;
+    
+}
+.skills-primary span{
+    background-color: red;
+}
+.skills-secondary span{
+    background-color:rgb(245, 28, 75);
+}
+[data-skill="5"] span{
+    display: block;
+   /* background-color: red; */
+   padding-left: 3px 0 3px 3px;
+    width: 50%;
+}
+[data-skill="3"] span{
+    display: block;
+   /* background-color: red; */
+   padding-left: 3px 0 3px 3px;
+    width: 30%;
+}
+[data-skill="1"] span{
+    display: block;
+   /* background-color: red; */
+   padding-left: 3px 0 3px 3px;
+    width: 10%;
+}
+[data-skill="9"] span{
+    display: block;
+   /* background-color: red; */
+   padding-left: 3px 0 3px 3px;
+    width: 90%;
+}
+[data-skill="7"] span{
+    display: block;
+   /* background-color: red; */
+   padding-left: 3px 0 3px 3px;
+    width: 70%;
+}
+
+@media screen and (max-width: 600px) {
+    header div{
+        display:unset;
+    }
+    .content{/*div main*/
+        display:grid;
+        grid-template-columns:100%;
+    }
+    
+    .contacts{/*moving  red and black boxes to the top*/
+       position:unset;
+        width: 100%;
+    }
+    dt {/*red box email skype......*/
+        color: white;
+        width: 30%;
+        background: red;
+        padding-right: 5px;
+        margin: 0;
+    }
+   dd {/*black box [ width=100 - dt_Width ]*/
+    color: red;
+    width: 70%;
+    background: black;
+    padding-left:5px;
+    margin: 0;
+    /* margin-left: 10px; */
+   }
+}
+
+
