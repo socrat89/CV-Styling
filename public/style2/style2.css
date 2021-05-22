@@ -1,0 +1,199 @@
+figure img {/*move and rotate the pic*/
+    position:absolute;
+    transform: rotate(-20deg);
+    top:5%;
+    right:20%;
+
+}
+hgroup{
+    margin: 3%;
+}
+hgroup h1{
+padding-bottom: 1%;
+border-bottom: 1px solid gray;/*line under name*/
+}
+hgroup h2{/*hide Codes and sleeps*/
+    display: none;
+}
+#about h3{/*hide About*/
+    display: none;
+}
+#about p{/*styling about text*/
+    opacity: 0.5;
+    width: 70%;
+    margin: 3%;
+}
+#competencies{/*splite to two parts*/
+    display: grid;
+    grid-template-columns: 20% 80%;
+    margin:3%;
+}
+.content h3 {/**/
+    border-right:1px solid grey;
+    grid-row:1/3;
+}
+.skills {
+    display:flex;
+}
+.skill{
+    margin: 1%;
+}
+.skills-primary div {/*first 3 green boxes*/
+
+    width: 10%;
+    height: 15%;
+    color: white;
+    background-color:rgb(6, 110, 110);
+    margin-bottom: 1%;
+    padding: 5px 0 25px 10px;
+    
+}
+
+.skills-secondary div{/*set the second 3green boxes*/
+    width: 10%;
+    height: 15%;
+    color: white;
+    background-color: rgb(6,110,110);
+    margin-bottom: 1%;
+    padding: 5px 0 25px 10px;
+    font-size: 0.7em;
+}
+[data-skill="5"] span::after{
+    content: "\A ★★★★★";
+    display: block;
+}
+  [data-skill="3"] span::after{
+    content: "\A ★★★";
+    display: block;
+}
+[data-skill="1"] span::after{
+    content: "\A ★";
+    display: block;
+} 
+[data-skill="9"] span::after{
+    content: "\A ★★★★★★★★★";
+    display: block;
+}
+[data-skill="7"] span::after{
+    content: "\A ★★★★★★★";
+    display: block;
+}
+/*........experience..........*/
+.experience-location{
+    margin-left: 65%;
+    color: grey;
+}
+.experience-date {
+    
+    color:grey;
+}
+#experiences {/*splite to two parts*/
+    display:grid;
+    grid-template-columns: 20% 80%;
+    margin:3%;
+}
+.experience{
+    margin: 0 3% 0 3%;
+    display:grid;
+   grid-template-rows: 1/2;
+}
+.experience-details{
+    margin-top: 1%;
+}
+.experience-type {
+    color:rgb(6,110,110);
+}
+.experience-institution {
+    display:none;
+}
+/*............education............*/
+#education{
+    display:grid;
+    grid-template-columns: 20% 80%;
+    margin:3%;
+}
+/*............hobbies............*/
+#hobbies{
+    display:grid;
+    grid-template-columns: 20% 80%;
+    margin:3%;
+}
+/*.............contact.............*/
+#contact{
+    display:grid;
+    grid-template-columns: 20% 80%;
+    margin:3%;
+}
+div.contacts {
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+#contact dt,dd{
+    display: none;
+}
+#contact h3{/*hide */
+    opacity: 0;
+}
+dl.contact.contact-email{
+    margin-left: 1%;
+    background-image: url(../images/email.png);
+    background-size: contain;
+    width: 100px;
+    height: 100px;
+  }
+  dl.contact.contact-phone{
+    margin-left: 2%;
+    background-image: url(../images/phone.png);
+    background-size: contain;
+    width: 100px;
+    height: 100px;
+  }
+  dl.contact.contact-github{
+    margin-left: 2%;
+    background-image: url(../images/github.png);
+    background-size: contain;
+    width: 100px;
+    height: 100px;
+  }
+  dl.contact.contact-facebook{
+    margin-left: 2%;
+    background-image: url(../images/facebook.png);
+    background-size: contain;
+    margin-right: 10px;
+    width: 100px;
+    height: 100px;
+  }
+  @media only screen and (max-width:600px){
+    header div figure img {
+        display:none;
+    }
+    header div hgroup h1 {
+        margin-left:1%;
+    }
+    #about p {
+        width:100%;
+    }
+    #competencies {
+        grid-template-columns: 1fr;
+    }
+    .content h3 {
+        border-bottom:1px solid grey;
+        border-right:none;
+        width: 45%;
+    }
+    #experiences,
+    #education,
+    #hobbies {
+        grid-template-columns: 1fr;
+    }
+    .experience-date {
+        float:right;
+    }
+   
+    
+
+
+
+
+  }
